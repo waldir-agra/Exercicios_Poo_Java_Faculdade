@@ -1,0 +1,71 @@
+package lista1;
+
+import java.util.Scanner;
+
+/**Escrever uma classe que utilize a estrutura switch-case para receber um peso (Kg) da Terra e um
+código de um plante conforme a tabela abaixo para imprimir o valor do seu peso neste plante. A
+tabela abaixo descreve a relação dos planetas e suas gravidades relativas à da Terra **/
+
+public class q7 {
+	
+
+
+public static void main(String[]args) {
+	Scanner sc = new Scanner(System.in);
+	
+		System.out.println("Digite seu peso :");
+		double pesoTerra = sc.nextInt();
+		
+		System.out.println("Digite: \n1 Mercurio\n2 Vênus\n3 Marte\n4 Júpiter\n5 Saturno\n6 Urano");
+		int numero = sc.nextInt();
+		double pesoPlaneta,peso;
+		
+	switch (numero) {
+	case 1 :
+		pesoPlaneta = (double)((double)pesoTerra/10*0.37); 
+		peso = pesoPlaneta;
+		System.out.println("Seu peso em Mercurio é:" + pesoPlaneta);
+	break;	
+	case 2 :
+		pesoPlaneta = (double)((double)pesoTerra/10*0.88);
+		peso = pesoPlaneta;
+	System.out.println("Seu peso em Vênus é:"+ pesoPlaneta);
+	break;	
+	case 3 :
+		pesoPlaneta = (double)((double)pesoTerra/10*0.38);
+		peso = pesoPlaneta;
+	System.out.println("Seu peso em Marte é:"+pesoPlaneta);
+	break;
+	case 4 :
+		pesoPlaneta = (double)((double)pesoTerra/10*2.64);
+		peso = pesoPlaneta;
+	System.out.println("Seu peso em Júpiter é:"+pesoPlaneta);
+	break;
+	case 5 :
+		pesoPlaneta = (double)((double)pesoTerra/10*1.15);
+		peso = pesoPlaneta;
+	System.out.println("Seu peso em Saturno é:"+pesoPlaneta);
+	break;
+	case 6 :
+		pesoPlaneta = (double)((double)pesoTerra/10*1.17);
+		peso = pesoPlaneta;
+	System.out.println("Seu peso em Urano é:"+pesoPlaneta);
+	break;
+	default:
+	      System.out.println("Número invalido!");
+
+	}
+}
+}
+
+
+
+	
+	
+
+
+
+
+
+
+
