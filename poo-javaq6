@@ -1,0 +1,44 @@
+package lista1;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+public class q6 {
+
+
+/** Escreva uma classe que receba do usuário seu nome e seu ano de seu nascimento e calcule sua idade.
+Verifique e mostre se ela já tem idade para votar (16 anos ou mais) e para tirar a carteira de
+habilitação (18 anos ou mais).**/
+
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+		int seu_ano_nascimento,idade;
+		
+		
+		Calendar cal = GregorianCalendar.getInstance();
+		int anoAtual = cal.get(Calendar.YEAR);
+		
+		System.out.println("Digite o seu nome: ");
+		String nome = sc2.next();
+		
+		System.out.println("Digite o ano do seu nascimento: ");
+		seu_ano_nascimento = sc.nextInt();
+		
+		idade = anoAtual - seu_ano_nascimento; 
+		
+		System.out.println("Seu nome é: "+nome+" Sua idade é: "+ idade);
+	
+	//switch (op) {
+	if (idade >= 16) {
+		System.out.println("***** Parabéns ***** Você já tem idade para votar!!!");
+	}else
+		System.out.println(":'( Você não tem idade para votar!!!");
+	if (idade >=18) {
+		System.out.println("***** Parabéns ***** Você já tem idade para tirar habilitação!!!");
+	}else
+		System.out.println(" :'( Você não tem idade pra tirar habilitação!!! ");
+	
+	}
+}
