@@ -1,0 +1,42 @@
+package lista1;
+//Escreva uma classe que obtenha o mínimo múltiplo comum (MMC) entre dois números fornecidos.
+import java.util.Scanner;
+
+public class q12 {
+	private int numero1;
+	private int numero2;
+	private int n = 2;
+	private int resultado = 1;
+
+	public static void main(String[] args) {
+		q12 mmc = new q12();
+		mmc.obtemNumeros();
+		System.out.println(mmc.calculaMmc());
+	}
+
+	public int calculaMmc() {
+		while (this.numero1 != 1 || this.numero2 != 1) {
+			while (this.numero1 % this.n != 0 && this.numero2 % this.n != 0) {
+				this.n++;
+			}
+			if (this.numero1 % n == 0) {
+				this.numero1 = this.numero1 / n;
+			}
+			if (this.numero2 % n == 0) {
+				this.numero2 = this.numero2 / n;
+			}
+			this.resultado *= this.n;
+		}
+		return this.resultado;
+	}
+
+	public void obtemNumeros() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite o primeiro número: ");
+		this.numero1 = sc.nextInt();
+
+		System.out.println("Digite o segundo número: ");
+		this.numero2 = sc.nextInt();
+	}
+}
