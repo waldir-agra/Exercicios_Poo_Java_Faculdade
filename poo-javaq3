@@ -1,0 +1,59 @@
+package lista1;
+
+import java.util.Scanner;
+/** Escreva uma classe para calcular a quantidade de latas de tinta e o custo para pintar um tanque no
+formato cilíndrico. Para isto são fornecidos o raio e a altura desse cilindro. Sabendo que:
+a. Uma lata de tinta custa R$ 50,00 e contém 5 litros;
+b. Para pintar 3 metros quadrados se usa 1 litro;
+c. Informe a altura (H) e o raio (R) do cilindro como dados de entrada;
+d. Os dados de saída serão o custo (C) e a quantidade (QTDE) necessária para pintar o cilindro;
+Utilizando o planejamento reverso, sabemos que:
+e. O custo é obtido pela quantidade de latas * R$ 50,00;
+f. A quantidade de latas é dada pela quantidade total de litros/5;
+g. A quantidade total de litros é dada pela área do cilindro/3;
+h. A área da base é (PI * pot(R, 2)) onde PI é uma constante de valor 3,14.
+i. A área lateral é altura * comprimento (2 * PI * R * H);
+j. A área do cilindro é dada pela área da base + área lateral; **/
+
+	public class q3 {
+	public static void main(String[]args){
+	Scanner sc = new Scanner(System.in);
+    
+	double  h=0,r=0,  area_do_cilindro = 0;
+	double  altura_do_cilindro =0,raio_do_cilindro =0;
+	 
+	int calcular_quantidade_de_latas_de_tinta =0 ;	
+	
+	
+	float custo=0;
+	
+	
+		
+	System.out.println("Digite o raio do clindro: ");
+	r = sc.nextInt();
+	System.out.println("Digite a altura do cilindro: ");
+    h = sc.nextInt();
+	
+	altura_do_cilindro = h;
+	raio_do_cilindro = r;
+	
+	area_do_cilindro = 2*3.14*raio_do_cilindro*(altura_do_cilindro+raio_do_cilindro);
+	calcular_quantidade_de_latas_de_tinta = (int) (area_do_cilindro/3.0);
+	
+	
+	System.out.println("A area do Cilindro é: " );
+	System.out.format("%.2f", area_do_cilindro );
+	
+		custo = calcular_quantidade_de_latas_de_tinta*50;
+		
+		System.out.println("\nA quantidade de latas de tinta é: " );
+		System.out.println( calcular_quantidade_de_latas_de_tinta );
+	
+		System.out.println("\nO custo para pintar um tanque no formato cilíndrico é: " );
+		System.out.println(   custo);
+		
+	 
+ 			}
+		}
+	
+	
