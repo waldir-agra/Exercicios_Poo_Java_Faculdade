@@ -1,0 +1,27 @@
+package lista1;
+
+import java.util.Scanner;
+
+public class q11 {
+
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int resultadoFatorial , numero;
+		System.out.println("Digite um número: ");
+		numero = sc.nextInt();
+		
+		 		double x = numero; // aqui criamos uma variável que irá armazenar o numero do fatorial
+				double f = x; // aqui criamos outra var. Será o resultado temporário da multiplicação
+				
+				
+				
+				while (x > 1){
+					  f = f *(x-1) ;
+					  x--;
+					                    }
+					  System.out.println(f); // Aqui exibira o valor final do Fatorial	
+					                                                       						
+	}
+}
+
