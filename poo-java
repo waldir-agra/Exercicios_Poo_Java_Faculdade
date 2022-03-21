@@ -1,8 +1,8 @@
 package lista1;
 
-//Escreva uma classe para calcular as raízes de uma equação do 2o grau (ax2 + bx + c), onde os valores
+/** Escreva uma classe para calcular as raízes de uma equação do 2o grau (ax2 + bx + c), onde os valores
 de a, b e c serão fornecidos pelo usuário (considere que a equação possui duas raízes reais).
-import java.util.Scanner;
+import java.util.Scanner; **/
 
 public class q1 {
 	public static void main(String[]args){
