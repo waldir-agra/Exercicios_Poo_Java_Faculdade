@@ -1,0 +1,87 @@
+package lista1;
+/**Escreva uma classe que utilize estrutura switch-case e receba o preço e a quantidade de um produto
+e realize a multiplicação para obter o valor parcial a ser pago pelo produto. Atribua um código de
+pagamento baseado na tabela abaixo para aumentar ou reduzir o valor e gerar o valor total a ser
+pago pelo produto.
+Código
+Condição de Pagamento ok
+1À vista em dinheiro ou cheque, receba com 10% de desconto. ok
+2À vista no cartão de crédito, receba com 5% de desconto. ok
+3Em duas vezes, preço normal sem juros. ok
+4Em três vezes, preço normal mais juros de 15%. ok**/
+
+import java.util.Scanner;
+
+public class q8 {
+	public static void main(String[]args) {
+		
+	Scanner sc = new Scanner(System.in);
+	
+		
+	System.out.println("Digite o Preço :");
+	double valorProduto = sc.nextDouble();
+	System.out.println("Digite a quantidade do produto :");
+	double quantidadeProduto = sc.nextInt();
+			
+			System.out.println("Digite: \n[1] *** À vista em dinheiro ou cheque, receba 10% de desconto!***\n[2] *** À vista no cartão de crédito, receba 5% de desconto!***"
+					+ "\n[3] *** Em duas vezes, preço normal sem juros!*** \n[4] *** Em três vezes, preço normal mais juros de 15%!*** ");
+			int numero = sc.nextInt();
+		
+		double valorOriginal = 0;
+	
+	    
+		
+		
+		double valorFinal = 0;
+		switch (numero) {
+		case 1 :
+			valorProduto = (float)((double)valorProduto*quantidadeProduto); 
+			valorFinal = (int) valorProduto;
+			double percentual = 10.0 / 100.0;
+			double valorFinal_percentual1 = valorFinal - percentual * valorFinal;
+			System.out.println("À vista em dinheiro ou cheque, valor normal R$ " + valorFinal);
+			System.out.println("À vista em dinheiro ou cheque, com 10% de desconto R$ " + valorFinal_percentual1);
+		break;	
+		case 2 :
+			valorProduto = (float)((double)valorProduto*quantidadeProduto);
+			valorFinal = (int) valorProduto;
+			double percentual2 = 5.0 / 100.0;
+			double valorFinal_percentual2 = valorFinal - percentual2 * valorFinal;			
+			System.out.println("À vista no cartão de crédito R$ " + valorFinal + " com 5% de desconto R$ "+ valorFinal_percentual2);
+		break;	
+		case 3 :
+			valorProduto = (float)((double)valorProduto*quantidadeProduto);
+			valorFinal = (int) valorProduto;
+			
+			double valorFinal3 = valorFinal / 2;
+			
+		System.out.println("Em duas vezes de R$ "+ valorFinal3 + " preço normal sem juros R$ "+ valorFinal);
+		break;
+		case 4 :
+			valorProduto = (float)((double)valorProduto*quantidadeProduto);
+			valorFinal = (int)valorProduto;
+			double percentual4 = 15.0 / 100.0;
+			double valorFinal_percentual4 = valorFinal + percentual4 * valorFinal;			
+		System.out.println("Em três vezes de R$ " + valorFinal/3 +" preço normal mais juros de 15% R$ "+ valorFinal_percentual4);
+		break;		
+		default:
+		      System.out.println("Número invalido!");
+
+		}
+		}
+}
+
+
+
+		
+		
+
+
+
+
+
+
+
+
+
+
