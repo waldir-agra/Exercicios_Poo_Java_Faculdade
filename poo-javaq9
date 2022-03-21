@@ -1,0 +1,36 @@
+package lista1;
+
+import java.text.BreakIterator;
+
+public class q9 {
+public static void main(String[]args) {
+	
+	//Imprimir a tabuada de multiplicação do número 7 utilizando as três estruturas de repetição em java
+	//(while, do while e for).Crie três classes cada uma com uma estrutura.
+	System.out.println("===================== WHILE ===========================================");
+	int i =0;	
+	while (i <= 9) {
+		i = i + 1;
+		System.out.println("7 x "+ i + " = " +i*7 );
+	
+	
+	}
+	System.out.println("===================== DO /  WHILE ===========================================");
+			int j = 0;
+			do {
+				System.out.println("7 x "+ j + " = " +j*7 );
+				++j;
+				}while(j<=10);
+		
+				System.out.println("============== FOR ==================================================");
+
+				for(int l = 0; l<=10; ++l) {
+				System.out.println("7 x "+ l + " = " +l*7 );
+			
+		}
+}
+
+}
+	
+
+
