@@ -1,0 +1,36 @@
+package lista1;
+import java.util.Scanner;
+public class q10 {	 
+	
+	 public static void main(String[]args) {
+		//Escreva uma classe que receba um número qualquer do usuário e identifique se é um número primo.
+		int valor = 1; 
+		
+		Scanner numero = new Scanner(System.in);
+		
+		System.out.println("Digite um Número: ");
+		valor = numero.nextInt();
+		
+		boolean numeroPrimo;
+		if (valor == 2) {
+		    numeroPrimo = true;
+		} else if (valor % 2 == 0) {  // se é par, mas não é 2, não é primo
+		    numeroPrimo = false;
+		} else {
+		    numeroPrimo = true;
+		    for (int i = 3; i < valor; i += 2) { // testo apenas se é divisível por ímpares
+		        if (valor % i == 0) {
+		            numeroPrimo = false;
+		            break; // já sei que não é primo, interrompe o for
+		        }
+		    }
+		}
+
+		if (numeroPrimo) {
+		    System.out.println("O número informado é primo!!!");
+		} else {
+		    System.out.println("O número informado NAO é primo.");
+		}
+	 }
+}
+
