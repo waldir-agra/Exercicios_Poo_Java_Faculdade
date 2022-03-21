@@ -1,0 +1,89 @@
+package lista1;
+ 
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+ 
+public class q5 {
+ 
+    /**Escreva uma classe que receba a idade de um atleta, faça uma classificação seguindo a tabela abaixo:
+Idade Categoria
+Até 4 anos Não Permitido
+De 5 até 7 anos Infantil A
+De 8 até 10 anos Infantil B
+De 11 até 13 anos Juvenil A
+De 14 até 18 anos Juvenil B
+Acima de 18 anos Profissional
+    **/ 
+     
+    public static void main(String[] args) {
+       
+ 
+         Scanner sc = new Scanner(System.in);
+        	 
+         
+         int idade ;
+         
+         System.out.println("Digite a idade do atleta: ");
+     	 idade = sc.nextInt();
+     	 		 if(idade <= 4 ) {
+     	 			System.out.println("O Atleta tem: "+ idade + " Anos e está na categoria: Não Permitido");        	 
+         }else 
+                 if(idade ==5) {
+                	 System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Infantil A");
+                 }
+         else 
+                 if(idade <=5) {
+                 	 System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Infantil A");              	 
+                 }
+         else
+        	 	 if(idade <=7) {
+        	 		 System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Infantil A");
+        	 }
+         else 
+        	 	if(idade <=8 )    {
+        	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Infantil B");        	 
+        	 }
+         else 
+        	 	if(idade <=10 ) {
+        	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Infantil B");
+        	 }
+         else 
+        	 	if(idade <=11) {
+        	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Juvenil A");
+        	 }
+         else     	 
+        	 	if(idade <=13) {
+        	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Juvenil A");
+        	 }
+         else     	 
+             	if(idade <=14) {
+             		System.out.println("O Atleta tem: "+ idade +"Anos e está na categoria: Juvenil B");
+             }
+         else     	 
+             	if(idade < 18) {
+             		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Juvenil B");
+             }
+          
+         else 
+        	 	if(idade ==18) {
+        	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Profissional");
+        	 }		
+         else 
+           	 	if(idade >=18) {
+           	 		System.out.println("O Atleta tem: "+ idade +" Anos e está na categoria: Profissional!");
+        	 		
+        	 } 
+     	 		 
+             }
+    
+}    
+        
+         
+         
+         
+         
+         
+         
+            
+        
