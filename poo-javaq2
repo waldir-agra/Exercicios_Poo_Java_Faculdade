@@ -1,0 +1,31 @@
+package lista1;
+/**
+a)Se a = verdade, b = verdade, c = falso, quais comandos serão executados?
+b)Se a = false, b = verdade, c = verdade, quais comandos serão executados?
+c)Se a = false, b = verdade, c = verdade, quais comandos serão executados?
+d)Quais são os valores de a, b e c para que o comando5 e comando6 sejam executados?
+e)Quais são os valores de a, b e c para que somente o comando6 seja executado? **/
+
+public class q2 {
+	public static void main(String[]args) {
+		boolean a=false;
+		boolean b=true;
+		boolean c=false;
+		
+		if(a==true) {
+			System.out.println("comando1");
+		}else {
+			if(b==true) {
+				if(c==true) {
+					System.out.println("comando2");
+				}else {
+					System.out.println("comando3");
+					System.out.println("comando4");
+				}
+			}
+		System.out.println("comando5 "); 
+	}
+	System.out.println("comando6");
+	}
+}
+
