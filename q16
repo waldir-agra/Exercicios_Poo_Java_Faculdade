@@ -1,0 +1,110 @@
+package lista1;
+
+import java.util.Scanner;
+public class q16 {
+	public static void main(String[]args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int voto=7;
+		int jose=0,maria=0,paulo=0,carla=0,juvenil=0,profissional=0;
+		int votoNulo=0,votoBranco=0,vTotal=0;
+		
+		//vTotal = jose+maria+paulo+carla+juvenil+profissional+votoNulo+votoBranco; 
+		
+		while (voto !=0)
+		{
+		
+		System.out.println(" Digite 1 Para Votar em José\n"+" "+"Digite 2 Para Votar em Maria\n"+
+				" "+"Digite 3 Para Votar em Paulo\n"+" "+"Digite 4 Para Votar em Carla\n"+
+				" "+"Digite 5 Para Votar em Juvenil B\n"+" Digite 6 Para Votar em Profissional\n"+" Digite 7 Para Votar em nulo\n"+" Digite 8 Para Votar em branco\n");
+		
+		
+		System.out.println("Digite um Número...");		
+		voto = sc.nextInt();
+		
+		switch(voto)
+		{
+			case 0:
+				System.out.println("Votação encerrada");
+				break;
+		
+			case 1:
+				System.out.println("Obrigado por votar em José!");
+				jose = jose+1 ;
+				break;
+		
+			case 2:
+				System.out.println("Obrigado por votar em Maria!");
+				maria = maria+1;
+				break;
+			case 3:
+				System.out.println("Obrigado por votar em Paulo!");
+				paulo = paulo+1;
+				break;
+			case 4:
+				System.out.println("Obrigado por votar em Carla!");
+				carla = carla+1;
+				break;
+			case 5:
+				System.out.println("Obrigado por votar em Juvenil B!");
+				juvenil = juvenil+1;
+				break;
+			case 6:
+				System.out.println("Obrigado por votar em Profissional!");
+				profissional = profissional+1;
+				break;
+			case 7:
+				System.out.println("Obrigado por votar em nulo!");
+				votoNulo = votoNulo+1;
+				break;
+			case 8:
+				System.out.println("Obrigado por votar em branco!");
+				votoBranco = votoBranco+1;
+				break;
+			
+			default:
+				System.out.println("O Número digitado está incorreto!");
+				break;
+		}
+		if (voto ==1 || voto ==2 ||voto==3||voto==4||voto==5||voto==6||voto==7||voto==8) {
+		vTotal++;	
+		}
+		}
+		System.out.println(	"*** O total de votos para José foi: ("+ jose +")***");
+		double pJose = (100*jose)/vTotal;
+		System.out.println("\nE o seu percentual sobre o total: "+ pJose );
+		
+		System.out.println("\n\n*** O total de votos para Maria foi: ("+ maria +")***");
+		double pMaria = (100*maria)/vTotal;
+		System.out.println("\nE o seu percentual sobre o total: "+ pMaria);
+		
+		System.out.println("\n\n***O total de votos para Paulo foi: ("+paulo+")***");
+		double pPaulo = (100*paulo)/vTotal;
+		System.out.println("\nE o seu percentual sobre o total: "+pPaulo);
+		
+		System.out.println("\n\n*** O total de votos para Carla foi: ("+carla+")***");
+		double pCarla = (100*carla)/vTotal;
+		System.out.println(	"\nE o seu percentual sobre o total: "+pCarla);
+		
+		System.out.println("\n\n*** O total de votos para Juvenil b foi: ("+juvenil+")***");
+		double pJuvenil = (100*juvenil)/vTotal;
+		
+		System.out.println("\nE o seu percentual sobre o total: "+pJuvenil);
+		System.out.println("\n\n*** O total de votos para Profissional foi: ("+profissional+")***");
+		double pProfissional = (100*profissional)/vTotal;
+		System.out.println("\nE o seu percentual sobre o total: "+pProfissional);
+		 
+		System.out.println("\n\nVotação total ["+vTotal+"]"+"Igual a 100%");
+		
+		System.out.println("\nO total de votos em nulos: "+votoNulo);
+		double pNulo = (100*votoNulo)/vTotal;		
+		System.out.println("Percentual sobre o total de Votos nulos: "+pNulo);
+		
+		
+		System.out.println("O total de votos em branco: "+votoBranco);
+		double pVotosBrancos = (100*votoBranco)/vTotal;
+		
+		System.out.println("\nPercentual sobre o total de Votos: "+pVotosBrancos);
+}
+}
+
