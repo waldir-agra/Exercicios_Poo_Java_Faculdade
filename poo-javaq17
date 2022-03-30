@@ -1,0 +1,112 @@
+package lista1;
+/**Escreva uma classe que receberá o nome e o seu salário de 5 funcionários e aplique o reajuste salarial
+de acordo com a tabela abaixo. Ao final informe o salário anterior, o valor que será acrescido após
+aplicar o percentual de reajuste e também informe o novo valor de salário de cada funcionário.
+Também informe qual o valor total que a empresa terá a mais em sua folha de pagamento após
+somar todos os reajustes.
+Faixa Salarial						Percentual de Ajuste
+Acima de R$ 1.800,00				5,72%
+Entre R$ 1.350,00 e R$ 1.800,00 	8,96%
+Entre R$ 1.050,00 e R$ 1.350,00		10,05%
+Entre R$ 850,00 e R$ 1.050,00 		12,96%
+Entre R$ 720,00 e R$ 850,00 		15,50%
+Abaixo de R$ 720,00 				20,74%
+
+**/
+import java.util.Scanner;
+
+public class q17 {
+	public static void main(String[]args) {
+		String[] nome;
+		nome = new String[5];
+		Scanner sc = new Scanner(System.in);
+		float salario=0,vSalarioAjustado=0;
+		
+		for(int i = 0; i < 5; i++) {
+			
+			System.out.println("Digite o Seu Nome: "+(i+1));
+			nome[i] = new Scanner(System.in).nextLine();
+			
+			System.out.println("Digite o Seu Salário: "+(i+1));	
+			salario = new Scanner(System.in).nextFloat();
+			
+		
+		
+			
+			
+			if ( salario >= 1800) {
+				vSalarioAjustado = ((float) (5.72*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 5,72% R$ "+vSalarioAjustado);
+					
+			} 
+				
+			if (salario >= 1350 && salario < 1800) {
+				vSalarioAjustado = ((float) (8.96*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 8.96% R$ "+vSalarioAjustado);
+			} 
+				
+			 
+			if (salario >= 1050 && salario < 1350) {
+				vSalarioAjustado = ((float) (10.05*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 10.05% R$ "+vSalarioAjustado);
+				
+				
+			} 
+			if (salario >= 850 && salario < 1050) {
+				vSalarioAjustado = ((float) (12.96*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 12.96% R$ "+vSalarioAjustado);
+				
+				
+			} 
+			if (salario >= 720 && salario < 850) {
+				vSalarioAjustado = ((float) (15.50*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 15.50% R$ "+vSalarioAjustado);
+				
+				
+			} 
+			if(salario < 720 ) {
+				vSalarioAjustado = ((float) (20.74*salario) /100+salario);
+				System.out.println("Nome do Funcionário: "+nome[i]);
+				System.out.println(" Salario do funcionário: R$"+salario+" com reajuste de 20.74% R$ "+vSalarioAjustado);
+			}	
+			 
+			
+
+		}
+		}
+	
+	
+		}
+	
+		
+	
+
+	
+
+
+			
+	
+		
+	
+
+		
+	
+
+		
+	
+	
+
+			
+						
+		
+		
+	
+			
+			
+			
+
